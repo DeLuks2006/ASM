@@ -18,12 +18,12 @@ nextchar:
 
 finished:
 	sub	eax, ebx	; subtract the address in EBX from the address in EAX
-					; remember both registers startef pointing to the same 
-					; address but EAX has been incremented one byte for each 
-					; address from another of the same type. when you subtract
-					; one memory address from another of the same type the
-					; result is number of segments between them - in this case
-					; bytes
+				; remember both registers startef pointing to the same 
+				; address but EAX has been incremented one byte for each 
+				; address from another of the same type. when you subtract
+				; one memory address from another of the same type the
+				; result is number of segments between them - in this case
+				; bytes
 
 	mov	edx, eax	; EAX now equals the number of bytes in our string
 	mov	ecx, msg	; the rest of the code should be familiar by now
